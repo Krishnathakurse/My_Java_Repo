@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+xmlns = "http://www.springframework.org/schema/beans"
+xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation = "http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+                        
+<bean id = "hello1" class = "springioc.lab.test.Hello">
+<property name = "a" value = "99"/>
+<property name = "str" value = "Hello Guys"/>
+</bean>
+
+<bean id = "hai1" class = "springioc.lab.test.Hai">
+<constructor-arg value = "88"/>
+<constructor-arg value = "Hai Guys"></constructor-arg>
+</bean>
+
+<bean id = "aobj" class = "springioc.lab.test.A">
+<property name = "hello" ref = "hello1"/>
+<property name = "hai" ref = "hai1"/>
+</bean>
+
+<bean id = "bobj" class ="springioc.lab.test.B">
+<constructor-arg ref = "hello1"></constructor-arg>
+<constructor-arg ref = "hai1"></constructor-arg>
+</bean>
+</beans>

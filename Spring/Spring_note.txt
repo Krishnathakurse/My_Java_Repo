@@ -1,0 +1,29 @@
+Beans Scope:
+
+There are five scopes for beans
+
+1. Singleton : 
+  	When bean scope is sigleton then only one instance will be created by the spring container at container startup and the same will be returned when ever it will 	be   called (getBean() method).
+
+2. Prototype :
+	A new instance will be created always by the spring container whenever the getBean() method will be called.
+
+3. Request :
+	This is equal to the httpServletRequest in the web based application.
+
+4. Response :
+	This is equal to the HttpServletResponse in the web based application.
+
+5. Session:
+       Same as HttpSession
+
+6. Global Session:
+	same as the session of portlet based web applicatoin.
+
+
+Usase :
+
+	<bean id = "" class = "" scope = "XX">
+
+	Default scope of the bean in the applicationcontext container is sigleton.
+ 
